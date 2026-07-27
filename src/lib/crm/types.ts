@@ -69,6 +69,8 @@ export type LeadInput = {
   medium?: string | null;
   campaign?: string | null;
   conversionPage?: string | null;
+  gclid?: string | null;
+  fbclid?: string | null;
   notes?: string | null;
 };
 
@@ -84,6 +86,8 @@ export type LeadRow = {
   medium: string | null;
   campaign: string | null;
   conversion_page: string | null;
+  gclid: string | null;
+  fbclid: string | null;
   status: LeadStatus;
   notes: string | null;
   created_at: string;

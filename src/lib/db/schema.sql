@@ -39,6 +39,8 @@ CREATE TABLE IF NOT EXISTS leads (
   medium TEXT,
   campaign TEXT,
   conversion_page TEXT,
+  gclid TEXT,
+  fbclid TEXT,
   status TEXT NOT NULL DEFAULT 'novo'
     CHECK (status IN ('novo', 'em_atendimento', 'qualificado', 'proposta_enviada', 'fechado', 'perdido')),
   notes TEXT,

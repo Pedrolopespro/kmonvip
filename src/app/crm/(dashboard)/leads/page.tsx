@@ -1,7 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { Plus } from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Plus, Download } from "lucide-react";
 import { inputCls, PrimaryButton } from "@/components/crm/FormField";
 import LeadModal from "@/components/crm/LeadModal";
 import { LEAD_STATUSES, type LeadRow, type LeadStatus } from "@/lib/crm/types";
@@ -50,6 +50,16 @@ export default function CrmLeadsPage() {
     return () => clearTimeout(timeout);
   }, [fetchLeads]);
 
+  const exportHref = useMemo(() => {
+    const params = new URLSearchParams();
+    if (search) params.set("search", search);
+    if (status) params.set("status", status);
+    if (from) params.set("from", from);
+    if (to) params.set("to", to);
+    const qs = params.toString();
+    return `/api/crm/leads/export${qs ? `?${qs}` : ""}`;
+  }, [search, status, from, to]);
+
   async function handleStatusChange(id: number, newStatus: LeadStatus) {
     setRows((prev) => prev.map((r) => (r.id === id ? { ...r, status: newStatus } : r)));
     await fetch(`/api/crm/leads/${id}`, {
@@ -63,9 +73,17 @@ export default function CrmLeadsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between flex-wrap gap-4">
         <h1 className="text-2xl font-medium text-ink-900">Leads</h1>
-        <PrimaryButton type="button" onClick={() => setModalLead("new")} className="flex items-center gap-2">
-          <Plus size={16} /> Novo lead
-        </PrimaryButton>
+        <div className="flex items-center gap-3">
+          <a
+            href={exportHref}
+            className="px-6 py-3 rounded-full border border-ink-200 text-sm font-medium text-ink-700 hover:bg-white transition-colors flex items-center gap-2"
+          >
+            <Download size={16} /> Exportar CSV
+          </a>
+          <PrimaryButton type="button" onClick={() => setModalLead("new")} className="flex items-center gap-2">
+            <Plus size={16} /> Novo lead
+          </PrimaryButton>
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-3">

@@ -27,9 +27,14 @@ export const LeadService = {
           input.serviceInterest ? ` — serviço: ${input.serviceInterest}` : ""
         }`;
         const mergedNotes = existing[0].notes ? `${existing[0].notes}\n${noteAddition}` : noteAddition;
+        // Keep first-touch gclid/fbclid if the lead already has one (matches the
+        // 90-day first-touch cookie in tracking/attribution.ts) — only backfill
+        // when the existing record doesn't have a value yet.
+        const gclid = existing[0].gclid ?? input.gclid ?? null;
+        const fbclid = existing[0].fbclid ?? input.fbclid ?? null;
         const updated = (await sql`
           UPDATE leads
-          SET updated_at = now(), notes = ${mergedNotes}
+          SET updated_at = now(), notes = ${mergedNotes}, gclid = ${gclid}, fbclid = ${fbclid}
           WHERE id = ${existing[0].id}
           RETURNING *
         `) as LeadRow[];
@@ -40,11 +45,12 @@ export const LeadService = {
     const inserted = (await sql`
       INSERT INTO leads (
         name, company_name, phone, phone_normalized, email, service_interest,
-        source, medium, campaign, conversion_page, status, notes
+        source, medium, campaign, conversion_page, gclid, fbclid, status, notes
       ) VALUES (
         ${input.name}, ${input.companyName ?? null}, ${input.phone ?? null}, ${phoneNormalized},
         ${input.email ?? null}, ${input.serviceInterest ?? null}, ${input.source ?? null},
         ${input.medium ?? null}, ${input.campaign ?? null}, ${input.conversionPage ?? null},
+        ${input.gclid ?? null}, ${input.fbclid ?? null},
         'novo', ${input.notes ?? null}
       )
       RETURNING *
@@ -57,11 +63,12 @@ export const LeadService = {
     const inserted = (await sql`
       INSERT INTO leads (
         name, company_name, phone, phone_normalized, email, service_interest,
-        source, medium, campaign, conversion_page, status, notes
+        source, medium, campaign, conversion_page, gclid, fbclid, status, notes
       ) VALUES (
         ${input.name}, ${input.companyName ?? null}, ${input.phone ?? null}, ${phoneNormalized},
         ${input.email ?? null}, ${input.serviceInterest ?? null}, ${input.source ?? null},
         ${input.medium ?? null}, ${input.campaign ?? null}, ${input.conversionPage ?? null},
+        ${input.gclid ?? null}, ${input.fbclid ?? null},
         'novo', ${input.notes ?? null}
       )
       RETURNING *
