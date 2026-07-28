@@ -93,16 +93,16 @@ export const services: Service[] = [
     slug: "transporte-blindado",
     name: "Transporte Blindado",
     shortName: "Blindado",
-    hook: "Transporte Blindado Executivo — Veículos B6 com Motorista Treinado",
+    hook: "Transporte Blindado Executivo com Motorista Treinado",
     meta: {
       title: "Transporte Blindado com Motorista no Brasil",
-      description: "Veículos blindados B6 com motorista treinado para agendas que exigem segurança elevada, confidencialidade e proteção. Brasília, São Paulo e Rio de Janeiro.",
+      description: "Veículos blindados com motorista treinado para agendas que exigem segurança elevada, confidencialidade e proteção. Brasília, São Paulo e Rio de Janeiro.",
       keywords: [
         "transporte blindado",
         "transporte blindado executivo",
         "carro blindado com motorista",
         "veículo blindado executivo",
-        "blindado B6 Brasília",
+        "blindado Brasília",
         "blindado com motorista São Paulo",
         "transporte VIP blindado",
         "SUV blindado com motorista",
@@ -116,9 +116,9 @@ export const services: Service[] = [
       ],
     },
     intro:
-      "O transporte blindado da KMON VIP atende executivos, autoridades, diplomatas e personalidades que precisam combinar mobilidade premium com segurança elevada. Operamos veículos blindados nível B6, conduzidos por motoristas treinados em direção defensiva, evasiva e protocolo executivo. Cada operação é planejada com avaliação prévia de rotas, horários e pontos de risco, com suporte 24 horas e possibilidade de escolta dedicada. Discrição absoluta, confidencialidade contratual e padrão internacional em cada deslocamento — em Brasília, São Paulo, Rio de Janeiro e demais capitais sob demanda.",
+      "O transporte blindado da KMON VIP atende executivos, autoridades, diplomatas e personalidades que precisam combinar mobilidade premium com segurança elevada. Operamos veículos blindados, conduzidos por motoristas treinados em direção defensiva, evasiva e protocolo executivo. Cada operação é planejada com avaliação prévia de rotas, horários e pontos de risco, com suporte 24 horas e possibilidade de escolta dedicada. Discrição absoluta, confidencialidade contratual e padrão internacional em cada deslocamento — em Brasília, São Paulo, Rio de Janeiro e demais capitais sob demanda.",
     features: [
-      { title: "Blindagem nível B6 certificada", desc: "Veículos com proteção contra armamento de alta velocidade." },
+      { title: "Blindagem certificada", desc: "Veículos com proteção contra armamento de alta velocidade." },
       { title: "Motoristas treinados em segurança", desc: "Direção defensiva, evasiva e protocolo executivo." },
       { title: "Planejamento de rota", desc: "Avaliação prévia de trajeto, horários e pontos de risco." },
       { title: "Escolta sob demanda", desc: "Veículo batedor e equipe de segurança opcional." },
@@ -127,7 +127,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Qual o nível de blindagem dos veículos KMON VIP?",
-        a: "Nossa frota blindada utiliza nível B6, padrão certificado para proteção contra armamento de alta velocidade — o padrão recomendado para executivos, autoridades e diplomatas.",
+        a: "Nossa frota blindada conta com proteção certificada contra armamento de alta velocidade — o padrão recomendado para executivos, autoridades e diplomatas.",
       },
       {
         q: "Os motoristas têm treinamento específico para transporte blindado?",
@@ -175,7 +175,7 @@ export const services: Service[] = [
     features: [
       { title: "Protocolo internacional", desc: "Atendimento conforme padrões diplomáticos e cerimoniais." },
       { title: "Motoristas bilíngues", desc: "Fluência em inglês e espanhol, treinamento em recepção diplomática." },
-      { title: "Frota executiva e blindada", desc: "Sedans, SUVs e opções blindadas B6 conforme demanda." },
+      { title: "Frota executiva e blindada", desc: "Sedans, SUVs e opções blindadas conforme demanda." },
       { title: "Operação para grandes eventos", desc: "G20, COP, visitas de Estado, cúpulas multilaterais." },
       { title: "Base em Brasília", desc: "Sede operacional no centro do corpo diplomático brasileiro." },
     ],
@@ -419,7 +419,7 @@ export const cities: City[] = [
       "Atendimento ao corpo diplomático e embaixadas",
       "Cobertura 24h em todo o Distrito Federal",
       "Transfer Aeroporto Internacional JK",
-      "Frota blindada B6 com base local",
+      "Frota blindada com base local",
     ],
     faqs: [
       {
@@ -432,7 +432,7 @@ export const cities: City[] = [
       },
       {
         q: "Há frota blindada local em Brasília?",
-        a: "Sim. Operamos frota blindada B6 com base permanente em Brasília, disponível para autoridades, executivos e diplomatas no DF.",
+        a: "Sim. Operamos frota blindada com base permanente em Brasília, disponível para autoridades, executivos e diplomatas no DF.",
       },
     ],
     image: "/images/cities/Brasilia.webp",
@@ -481,7 +481,7 @@ export const cities: City[] = [
       },
       {
         q: "Há frota blindada em São Paulo?",
-        a: "Sim. Frota blindada B6 disponível em São Paulo para agendas que exigem segurança elevada.",
+        a: "Sim. Frota blindada disponível em São Paulo para agendas que exigem segurança elevada.",
       },
       {
         q: "Atendem nas principais regiões corporativas?",
@@ -759,7 +759,7 @@ export const fleet: FleetCategory[] = [
         "sedan blindado executivo",
         "blindado com motorista treinado",
         "sedan blindado Rio de Janeiro",
-        "sedan B6 com motorista",
+        "sedan blindado com motorista",
       ],
     },
     intro: "Sedans blindados com motorista treinado em direção defensiva e evasiva. Mercedes-Benz Classe E Blindado ou similar — segurança elevada com discrição absoluta e conforto de alto padrão, para executivos e autoridades que exigem proteção sem abrir mão da elegância.",
@@ -770,9 +770,9 @@ export const fleet: FleetCategory[] = [
   {
     slug: "suv-blindado",
     name: "SUV Blindado",
-    hook: "SUV Blindado B6 com Motorista — Jeep Commander Blindado",
+    hook: "SUV Blindado com Motorista — Jeep Commander Blindado",
     meta: {
-      title: "SUV Blindado com Motorista — Locação B6",
+      title: "SUV Blindado com Motorista — Locação",
       description: "SUV blindado Jeep Commander ou similar com motorista treinado em direção defensiva. Para 1 a 4 passageiros. Proteção máxima para executivos, autoridades e diplomatas.",
       keywords: [
         "SUV blindado com motorista",
@@ -781,15 +781,15 @@ export const fleet: FleetCategory[] = [
         "SUV blindado São Paulo",
         "locação SUV blindado",
         "blindado para diplomatas",
-        "SUV blindado nível B6",
+        "SUV blindado certificado",
         "transporte blindado VIP",
         "SUV blindado Rio de Janeiro",
         "SUV blindado com motorista treinado",
       ],
     },
-    intro: "SUVs blindados nível B6 com motorista treinado em direção defensiva e evasiva. Jeep Commander Blindado ou similar — maior volume e proteção para comitivas e autoridades que exigem segurança elevada em deslocamentos de alto risco.",
+    intro: "SUVs blindados com motorista treinado em direção defensiva e evasiva. Jeep Commander Blindado ou similar — maior volume e proteção para comitivas e autoridades que exigem segurança elevada em deslocamentos de alto risco.",
     specs: { passengers: "1 a 4 passageiros", model: "Jeep Commander Blindado ou similar" },
-    features: ["Blindagem B6 certificada", "Motorista treinado em segurança", "Comunicação segura", "Janelas seladas", "Planejamento de rota"],
+    features: ["Blindagem certificada", "Motorista treinado em segurança", "Comunicação segura", "Janelas seladas", "Planejamento de rota"],
     image: "/images/fleet/suv-commander.webp",
   },
   {
@@ -894,7 +894,7 @@ export const crossPages: CrossPage[] = [
     intro: "Em Brasília, a KMON VIP oferece transporte executivo com motorista há 35 anos. Atendemos diariamente embaixadas, ministérios, executivos corporativos e visitantes oficiais. Frota Mercedes-Benz Classe E e SUVs premium, operando 24 horas com cobertura completa no DF — Esplanada, Setor Hoteleiro, Lago Sul, Lago Norte, Park Way e Aeroporto JK.",
     bullets: ["Frota Mercedes-Benz Classe E e SUVs premium", "Cobertura 24h em todo o DF", "Atendimento a embaixadas e ministérios", "Motoristas bilíngues treinados em protocolo"],
     faqs: [
-      { q: "Qual a frota disponível em Brasília?", a: "Sedans executivos, sedans e SUVs blindados nível B6, mini vans, vans executivas e ônibus premium. Frota completa operando 24 horas na cidade." },
+      { q: "Qual a frota disponível em Brasília?", a: "Sedans executivos, sedans e SUVs blindados, mini vans, vans executivas e ônibus premium. Frota completa operando 24 horas na cidade." },
       { q: "Quantas horas por dia operam em Brasília?", a: "Operação 24 horas, com cobertura contínua em todo o DF e Aeroporto Internacional JK." },
       { q: "Atendem o corpo diplomático em Brasília?", a: "Sim. Brasília é nossa sede e atendemos diariamente embaixadas, consulados e missões diplomáticas." },
     ],
@@ -937,16 +937,16 @@ export const crossPages: CrossPage[] = [
   {
     serviceSlug: "transporte-blindado",
     citySlug: "brasilia",
-    hook: "Transporte Blindado em Brasília — Frota B6 e Escolta",
+    hook: "Transporte Blindado em Brasília — Frota Blindada e Escolta",
     meta: {
       title: "Transporte Blindado em Brasília com Motorista",
-      description: "Veículos blindados B6 com motorista treinado em Brasília. Atendimento a autoridades, executivos e diplomatas no Distrito Federal.",
-      keywords: ["transporte blindado Brasília", "carro blindado Brasília", "blindado B6 DF", "SUV blindado Brasília", "blindado com motorista DF", "transporte VIP blindado Brasília", "blindado para autoridade Brasília", "blindado para diplomata Brasília", "escolta executiva Brasília", "blindado Lago Sul", "veículo blindado Esplanada", "transporte blindado executivo DF"],
+      description: "Veículos blindados com motorista treinado em Brasília. Atendimento a autoridades, executivos e diplomatas no Distrito Federal.",
+      keywords: ["transporte blindado Brasília", "carro blindado Brasília", "blindado DF", "SUV blindado Brasília", "blindado com motorista DF", "transporte VIP blindado Brasília", "blindado para autoridade Brasília", "blindado para diplomata Brasília", "escolta executiva Brasília", "blindado Lago Sul", "veículo blindado Esplanada", "transporte blindado executivo DF"],
     },
-    intro: "Em Brasília, a KMON VIP opera frota blindada B6 com base local permanente. Atendemos autoridades federais, executivos corporativos e diplomatas com motoristas treinados em direção defensiva e protocolo executivo. Operação coordenada com avaliação de rota, escolta opcional e cobertura 24 horas em todo o Distrito Federal.",
-    bullets: ["Frota blindada B6 com base permanente em BSB", "Motoristas treinados em direção defensiva", "Escolta opcional sob demanda", "Cobertura 24h em todo o DF"],
+    intro: "Em Brasília, a KMON VIP opera frota blindada com base local permanente. Atendemos autoridades federais, executivos corporativos e diplomatas com motoristas treinados em direção defensiva e protocolo executivo. Operação coordenada com avaliação de rota, escolta opcional e cobertura 24 horas em todo o Distrito Federal.",
+    bullets: ["Frota blindada com base permanente em BSB", "Motoristas treinados em direção defensiva", "Escolta opcional sob demanda", "Cobertura 24h em todo o DF"],
     faqs: [
-      { q: "Há frota blindada disponível diariamente em Brasília?", a: "Sim. Mantemos base operacional permanente em Brasília com frota blindada B6 disponível 24 horas." },
+      { q: "Há frota blindada disponível diariamente em Brasília?", a: "Sim. Mantemos base operacional permanente em Brasília com frota blindada disponível 24 horas." },
       { q: "Os motoristas blindados têm formação específica?", a: "Sim. Treinamento contínuo em direção defensiva, evasiva e protocolo executivo para operações em DF." },
       { q: "Atendem o corpo diplomático com blindado?", a: "Sim. Atendimento contínuo a embaixadas e missões diplomáticas em Brasília com frota blindada." },
     ],
@@ -954,16 +954,16 @@ export const crossPages: CrossPage[] = [
   {
     serviceSlug: "transporte-blindado",
     citySlug: "sao-paulo",
-    hook: "Transporte Blindado em São Paulo — Veículos B6 com Motorista Treinado",
+    hook: "Transporte Blindado em São Paulo — Veículos Blindados com Motorista Treinado",
     meta: {
       title: "Transporte Blindado em São Paulo com Motorista",
-      description: "SUVs e sedans blindados B6 com motorista treinado em São Paulo. Atendimento a executivos, autoridades e mercado financeiro em SP.",
-      keywords: ["transporte blindado São Paulo", "carro blindado São Paulo", "blindado B6 SP", "SUV blindado São Paulo", "blindado com motorista SP", "blindado para executivo SP", "blindado Faria Lima", "blindado Vila Olímpia", "escolta executiva São Paulo", "transporte blindado Avenida Paulista", "blindado para mercado financeiro", "veículo blindado VIP SP"],
+      description: "SUVs e sedans blindados com motorista treinado em São Paulo. Atendimento a executivos, autoridades e mercado financeiro em SP.",
+      keywords: ["transporte blindado São Paulo", "carro blindado São Paulo", "blindado SP", "SUV blindado São Paulo", "blindado com motorista SP", "blindado para executivo SP", "blindado Faria Lima", "blindado Vila Olímpia", "escolta executiva São Paulo", "transporte blindado Avenida Paulista", "blindado para mercado financeiro", "veículo blindado VIP SP"],
     },
-    intro: "Em São Paulo, a KMON VIP oferece transporte blindado nível B6 com motorista treinado para executivos, autoridades e líderes do mercado financeiro. Cobertura nas principais regiões corporativas e atendimento em aeroportos de Guarulhos e Congonhas. Planejamento de rota, escolta opcional e operação coordenada para agendas sensíveis.",
-    bullets: ["SUVs e sedans blindados B6", "Motoristas treinados em segurança executiva", "Cobertura Faria Lima, Paulista, Itaim", "Escolta opcional e planejamento de rota"],
+    intro: "Em São Paulo, a KMON VIP oferece transporte blindado com motorista treinado para executivos, autoridades e líderes do mercado financeiro. Cobertura nas principais regiões corporativas e atendimento em aeroportos de Guarulhos e Congonhas. Planejamento de rota, escolta opcional e operação coordenada para agendas sensíveis.",
+    bullets: ["SUVs e sedans blindados", "Motoristas treinados em segurança executiva", "Cobertura Faria Lima, Paulista, Itaim", "Escolta opcional e planejamento de rota"],
     faqs: [
-      { q: "Há frota blindada em São Paulo?", a: "Sim. Frota blindada B6 disponível em São Paulo, com cobertura nos principais polos corporativos e aeroportos." },
+      { q: "Há frota blindada em São Paulo?", a: "Sim. Frota blindada disponível em São Paulo, com cobertura nos principais polos corporativos e aeroportos." },
       { q: "É possível contratar escolta junto ao blindado em SP?", a: "Sim. Oferecemos veículo batedor e equipe de segurança opcional, dimensionados conforme o perfil da operação." },
       { q: "Atendem em Guarulhos e Congonhas com blindado?", a: "Sim. Receptivo blindado em ambos os aeroportos paulistas." },
     ],
@@ -971,14 +971,14 @@ export const crossPages: CrossPage[] = [
   {
     serviceSlug: "transporte-blindado",
     citySlug: "rio-de-janeiro",
-    hook: "Transporte Blindado no Rio de Janeiro — Veículos B6 com Motorista",
+    hook: "Transporte Blindado no Rio de Janeiro — Veículos Blindados com Motorista",
     meta: {
       title: "Transporte Blindado no Rio de Janeiro com Motorista",
-      description: "Veículos blindados B6 com motorista treinado no Rio de Janeiro. Atendimento a executivos, autoridades, artistas internacionais e turismo VIP.",
-      keywords: ["transporte blindado Rio de Janeiro", "carro blindado Rio", "blindado B6 RJ", "SUV blindado Rio", "blindado com motorista Rio", "blindado para artista Rio", "blindado para celebridade RJ", "escolta executiva Rio", "blindado Copacabana", "blindado Ipanema", "blindado Barra da Tijuca", "transporte blindado Galeão"],
+      description: "Veículos blindados com motorista treinado no Rio de Janeiro. Atendimento a executivos, autoridades, artistas internacionais e turismo VIP.",
+      keywords: ["transporte blindado Rio de Janeiro", "carro blindado Rio", "blindado RJ", "SUV blindado Rio", "blindado com motorista Rio", "blindado para artista Rio", "blindado para celebridade RJ", "escolta executiva Rio", "blindado Copacabana", "blindado Ipanema", "blindado Barra da Tijuca", "transporte blindado Galeão"],
     },
-    intro: "No Rio de Janeiro, a KMON VIP oferece transporte blindado B6 com motorista treinado para executivos, autoridades, artistas internacionais e turismo VIP. Cobertura nos aeroportos Galeão e Santos Dumont, hotéis Zona Sul, eventos e centros corporativos. Histórico de atendimento a celebridades internacionais e operações de alta exposição.",
-    bullets: ["Frota blindada B6 no Rio de Janeiro", "Atendimento a artistas e celebridades", "Transfer blindado GIG e SDU", "Cobertura Zona Sul e Barra"],
+    intro: "No Rio de Janeiro, a KMON VIP oferece transporte blindado com motorista treinado para executivos, autoridades, artistas internacionais e turismo VIP. Cobertura nos aeroportos Galeão e Santos Dumont, hotéis Zona Sul, eventos e centros corporativos. Histórico de atendimento a celebridades internacionais e operações de alta exposição.",
+    bullets: ["Frota blindada no Rio de Janeiro", "Atendimento a artistas e celebridades", "Transfer blindado GIG e SDU", "Cobertura Zona Sul e Barra"],
     faqs: [
       { q: "A KMON VIP atende celebridades com blindado no Rio?", a: "Sim. Histórico de atendimento a turnês internacionais e personalidades com operação blindada discreta no RJ." },
       { q: "Há blindado disponível para transfer aeroportuário no Rio?", a: "Sim. Frota blindada disponível para transfer em Galeão (GIG) e Santos Dumont (SDU)." },
@@ -996,7 +996,7 @@ export const crossPages: CrossPage[] = [
       keywords: ["transporte diplomático Brasília", "transporte para embaixada Brasília", "transporte para delegação estrangeira", "carro para embaixador DF", "transporte para missão oficial Brasília", "transporte para cúpula internacional", "transporte para chanceler Brasília", "transporte para visita de Estado", "frota para corpo diplomático", "motorista diplomático Brasília", "transporte VIP embaixada", "transporte para consulado Brasília"],
     },
     intro: "Em Brasília, sede do governo brasileiro, a KMON VIP atende embaixadas, consulados, delegações estrangeiras e missões oficiais há 35 anos. Oferecemos transporte com protocolo internacional, motoristas bilíngues fluentes, frota executiva e blindada, planejamento de rotas para visitas oficiais e cobertura completa de agendas diplomáticas — incluindo cúpulas internacionais como G20 2024.",
-    bullets: ["35 anos atendendo o corpo diplomático", "Motoristas bilíngues e protocolados", "Frota executiva e blindada B6", "Histórico em G20, cúpulas e visitas de Estado"],
+    bullets: ["35 anos atendendo o corpo diplomático", "Motoristas bilíngues e protocolados", "Frota executiva e blindada", "Histórico em G20, cúpulas e visitas de Estado"],
     faqs: [
       { q: "Há quanto tempo a KMON VIP atende embaixadas em Brasília?", a: "Há 35 anos. Brasília é nossa sede desde 1990 e mantemos contratos com embaixadas, consulados e missões diplomáticas." },
       { q: "Atenderam o G20 Brasil 2024 em Brasília?", a: "Sim. Participamos da operação do G20 com frota dedicada a delegações internacionais e autoridades." },

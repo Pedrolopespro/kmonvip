@@ -73,7 +73,7 @@ export default function SobrePage() {
         <FeatureList
           heading="Pilares da KMON VIP"
           features={[
-            { title: "Segurança", desc: "Frota blindada B6, motoristas treinados, planejamento de rota e escolta sob demanda." },
+            { title: "Segurança", desc: "Frota blindada, motoristas treinados, planejamento de rota e escolta sob demanda." },
             { title: "Discrição", desc: "Confidencialidade absoluta em cada operação. Protocolo executivo e diplomático." },
             { title: "Precisão", desc: "Operação 24 horas, suporte ininterrupto e logística sob medida para agendas críticas." },
             { title: "Cobertura nacional", desc: "Brasília, São Paulo, Rio, Belo Horizonte, Manaus, Belém." },

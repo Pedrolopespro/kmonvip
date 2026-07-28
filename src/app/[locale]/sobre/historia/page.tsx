@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
     "Olimpíadas Rio 2016 transporte",
     "visita Obama Brasil transporte",
     "visita Biden Brasil transporte",
-    "GP Brasil F1 transporte Hamilton",
+    "cidadania honorária Lewis Hamilton",
   ],
 });
 

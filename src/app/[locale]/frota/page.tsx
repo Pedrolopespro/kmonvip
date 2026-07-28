@@ -20,13 +20,13 @@ export async function generateMetadata({
     locale,
     title: "Frota Executiva — Sedans, SUVs, Blindados, Vans e Ônibus Premium",
     description:
-      "Frota KMON VIP: sedans executivos, SUVs premium, veículos blindados B6, vans Mercedes-Benz Sprinter e ônibus premium. Operação 24h em todo o Brasil.",
+      "Frota KMON VIP: sedans executivos, SUVs premium, veículos blindados, vans Mercedes-Benz Sprinter e ônibus premium. Operação 24h em todo o Brasil.",
     path: "/frota",
     keywords: [
       "frota executiva KMON VIP",
       "sedan executivo com motorista",
       "SUV premium com motorista",
-      "veículo blindado B6",
+      "veículo blindado executivo",
       "van Mercedes Sprinter",
       "ônibus premium",
       "frota para comitiva",
@@ -56,7 +56,7 @@ export default function FrotaHub() {
               Frota executiva para diferentes níveis de operação
             </h1>
             <p className="text-base md:text-lg text-ink-500 leading-relaxed max-w-2xl">
-              Sedans executivos, SUVs premium, veículos blindados B6, vans Mercedes-Benz Sprinter e ônibus premium — sob coordenação única.
+              Sedans executivos, SUVs premium, veículos blindados, vans Mercedes-Benz Sprinter e ônibus premium — sob coordenação única.
             </p>
           </div>
         </section>

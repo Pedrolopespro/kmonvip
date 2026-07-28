@@ -228,8 +228,8 @@
         "desc": "Executive operations for the continental sporting event hosted in Brazil."
       },
       "7": {
-        "title": "Brazil GP — Lewis Hamilton",
-        "desc": "Executive armored reception for the driver and team during the Brazilian F1 Grand Prix."
+        "title": "Lewis Hamilton — Honorary Citizenship",
+        "desc": "Executive armored transport for the driver during the ceremony granting him honorary Brazilian citizenship."
       },
       "8": {
         "title": "The Killers — Brazil Tour",
@@ -416,7 +416,7 @@
       },
       {
         "title": "Armored vehicles on request",
-        "desc": "B6-certified armored sedans and SUVs for higher-risk profiles, official visits or high-exposure agendas."
+        "desc": "Armored sedans and SUVs for higher-risk profiles, official visits or high-exposure agendas."
       },
       {
         "title": "Protocol-trained drivers",
@@ -443,7 +443,7 @@
       },
       {
         "q": "Can you arrange armored vehicles for official visits or higher-risk profiles?",
-        "a": "Yes, we operate B6-certified armored sedans and SUVs and can brief on security planning for official visits, high-profile executives or sensitive agendas."
+        "a": "Yes, we operate armored sedans and SUVs and can brief on security planning for official visits, high-profile executives or sensitive agendas."
       },
       {
         "q": "Can you support a multi-city itinerary, such as Brasília followed by São Paulo in the same week?",
@@ -468,7 +468,7 @@
       },
       {
         "title": "Armored Transport",
-        "desc": "B6-certified armored sedans and SUVs for high-security agendas."
+        "desc": "Armored sedans and SUVs for high-security agendas."
       },
       {
         "title": "Coverage in Brasília",

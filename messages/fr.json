@@ -228,8 +228,8 @@
         "desc": "Opérations exécutives pour l'événement sportif continental organisé au Brésil."
       },
       "7": {
-        "title": "GP du Brésil — Lewis Hamilton",
-        "desc": "Accueil exécutif blindé pour le pilote et l'équipe lors du Grand Prix du Brésil de F1."
+        "title": "Lewis Hamilton — Citoyenneté Honoraire",
+        "desc": "Transport exécutif blindé pour le pilote lors de la cérémonie lui conférant le titre de citoyen honoraire brésilien."
       },
       "8": {
         "title": "The Killers — Tournée Brésil",
@@ -413,7 +413,7 @@
       },
       {
         "title": "Véhicules blindés sur demande",
-        "desc": "Berlines et SUV blindés niveau B6 pour les profils à exposition plus élevée, visites officielles ou agendas sensibles."
+        "desc": "Berlines et SUV blindés pour les profils à exposition plus élevée, visites officielles ou agendas sensibles."
       },
       {
         "title": "Chauffeurs formés au protocole",
@@ -440,7 +440,7 @@
       },
       {
         "q": "Pouvez-vous organiser des véhicules blindés pour des visites officielles ou des profils à risque plus élevé ?",
-        "a": "Oui, nous exploitons des berlines et SUV blindés niveau B6 et pouvons conseiller sur la planification de sécurité pour les visites officielles, cadres de haut profil ou agendas sensibles."
+        "a": "Oui, nous exploitons des berlines et SUV blindés et pouvons conseiller sur la planification de sécurité pour les visites officielles, cadres de haut profil ou agendas sensibles."
       },
       {
         "q": "Pouvez-vous gérer un itinéraire multi-villes, comme Brasília suivi de São Paulo la même semaine ?",
@@ -465,7 +465,7 @@
       },
       {
         "title": "Transport Blindé",
-        "desc": "Berlines et SUV blindés niveau B6 pour agendas de haute sécurité."
+        "desc": "Berlines et SUV blindés pour agendas de haute sécurité."
       },
       {
         "title": "Présence à Brasília",
