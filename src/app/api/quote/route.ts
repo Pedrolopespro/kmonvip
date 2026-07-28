@@ -26,6 +26,8 @@ const QuoteSchema = z.object({
   utmSource: z.string().nullable().optional(),
   utmMedium: z.string().nullable().optional(),
   utmCampaign: z.string().nullable().optional(),
+  utmTerm: z.string().nullable().optional(),
+  utmContent: z.string().nullable().optional(),
   gclid: z.string().nullable().optional(),
   fbclid: z.string().nullable().optional(),
   referrer: z.string().nullable().optional(),
@@ -84,6 +86,8 @@ export async function POST(req: NextRequest) {
         conversionPage: payload.landingPage ?? null,
         gclid: payload.gclid ?? null,
         fbclid: payload.fbclid ?? null,
+        utmTerm: payload.utmTerm ?? null,
+        utmContent: payload.utmContent ?? null,
       });
     }
 
@@ -94,6 +98,8 @@ export async function POST(req: NextRequest) {
       utmSource: payload.utmSource ?? null,
       utmMedium: payload.utmMedium ?? null,
       utmCampaign: payload.utmCampaign ?? null,
+      utmTerm: payload.utmTerm ?? null,
+      utmContent: payload.utmContent ?? null,
       gclid: payload.gclid ?? null,
       fbclid: payload.fbclid ?? null,
       referrer: payload.referrer ?? null,

@@ -20,6 +20,8 @@ const COLUMNS: { header: string; get: (l: LeadRow) => string }[] = [
   // original ad click — this is the whole point of this export.
   { header: "gclid", get: (l) => l.gclid ?? "" },
   { header: "fbclid", get: (l) => l.fbclid ?? "" },
+  { header: "termo_busca", get: (l) => l.utm_term ?? "" },
+  { header: "conteudo_anuncio", get: (l) => l.utm_content ?? "" },
   { header: "status", get: (l) => l.status },
   // Convenience column: Google Ads offline conversion import wants a plain
   // date/time. "fechado" is the status that represents a real conversion.

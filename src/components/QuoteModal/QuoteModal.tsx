@@ -349,6 +349,7 @@ export default function QuoteModal() {
 
   const openWhatsApp = () => {
     trackEvent({ eventType: "whatsapp_click", buttonId: "quote-success-whatsapp", buttonLocation: "quote-modal-success" });
+    sendGTMEvent({ event: "whatsapp_click", button_location: "quote-modal-success" });
     const text = encodeURIComponent(buildMessage());
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
   };

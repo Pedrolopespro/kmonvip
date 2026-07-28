@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useQuoteModal } from "./QuoteModal";
 import { trackEvent } from "@/lib/tracking/events";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function CTA() {
   const t = useTranslations("cta");
@@ -39,7 +40,10 @@ export default function CTA() {
                 href="https://wa.me/5561998630303"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent({ eventType: "whatsapp_click", buttonId: "cta-whatsapp", buttonLocation: "cta" })}
+                onClick={() => {
+                  trackEvent({ eventType: "whatsapp_click", buttonId: "cta-whatsapp", buttonLocation: "cta" });
+                  sendGTMEvent({ event: "whatsapp_click", button_location: "cta" });
+                }}
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-md px-8 py-4 text-sm font-medium transition-all hover:bg-white/20"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

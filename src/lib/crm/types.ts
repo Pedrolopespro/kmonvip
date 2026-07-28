@@ -71,6 +71,8 @@ export type LeadInput = {
   conversionPage?: string | null;
   gclid?: string | null;
   fbclid?: string | null;
+  utmTerm?: string | null;
+  utmContent?: string | null;
   notes?: string | null;
 };
 
@@ -88,6 +90,8 @@ export type LeadRow = {
   conversion_page: string | null;
   gclid: string | null;
   fbclid: string | null;
+  utm_term: string | null;
+  utm_content: string | null;
   status: LeadStatus;
   notes: string | null;
   created_at: string;
