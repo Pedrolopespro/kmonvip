@@ -52,7 +52,7 @@ const COUNTRY_CODES: { dial: string; flag: string; name: string }[] = [
 ];
 
 // ── Types ───────────────────────────────────────────────────────────
-type Purpose = "empresa" | "trabalho" | "pessoa-fisica";
+type Purpose = "empresa" | "trabalho";
 
 type FormData = {
   purpose: Purpose | "";
@@ -210,7 +210,6 @@ export default function QuoteModal() {
     const purposeLabel = {
       "empresa": "Empresa / Empresário",
       "trabalho": "Oportunidade de trabalho",
-      "pessoa-fisica": "Pessoa Física",
     }[data.purpose as Purpose] || "—";
 
     return [
@@ -243,7 +242,6 @@ export default function QuoteModal() {
     const purposeLabel = {
       "empresa": "Empresa / Empresário",
       "trabalho": "Oportunidade de trabalho",
-      "pessoa-fisica": "Pessoa Física",
     }[data.purpose as Purpose] || "—";
 
     const rows: [string, string][] = [
@@ -505,9 +503,8 @@ function Step1({
 }) {
   const t = useTranslations("quoteModal");
   const opts: { value: Purpose; key: string }[] = [
-    { value: "empresa",       key: "empresa" },
-    { value: "pessoa-fisica", key: "pessoaFisica" },
-    { value: "trabalho",      key: "trabalho" },
+    { value: "empresa",  key: "empresa" },
+    { value: "trabalho", key: "trabalho" },
   ];
 
   return (
@@ -770,29 +767,25 @@ function Step3({
         </div>
       </Field>
 
-      {data.purpose !== "pessoa-fisica" && (
-        <>
-          <Field label={t("step3.position")}>
-            <input
-              type="text"
-              value={data.position}
-              onChange={(e) => set("position", e.target.value)}
-              placeholder={t("step3.placeholderPosition")}
-              className={inputCls(false)}
-            />
-          </Field>
+      <Field label={t("step3.position")}>
+        <input
+          type="text"
+          value={data.position}
+          onChange={(e) => set("position", e.target.value)}
+          placeholder={t("step3.placeholderPosition")}
+          className={inputCls(false)}
+        />
+      </Field>
 
-          <Field label={t("step3.company")}>
-            <input
-              type="text"
-              value={data.company}
-              onChange={(e) => set("company", e.target.value)}
-              placeholder={t("step3.placeholderCompany")}
-              className={inputCls(false)}
-            />
-          </Field>
-        </>
-      )}
+      <Field label={t("step3.company")}>
+        <input
+          type="text"
+          value={data.company}
+          onChange={(e) => set("company", e.target.value)}
+          placeholder={t("step3.placeholderCompany")}
+          className={inputCls(false)}
+        />
+      </Field>
     </div>
   );
 }

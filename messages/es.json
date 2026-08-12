@@ -304,10 +304,6 @@
           "title": "Empresa y empresario",
           "sub": "Transporte ejecutivo corporativo"
         },
-        "pessoaFisica": {
-          "title": "Persona Física",
-          "sub": "Transferencia o conductor privado"
-        },
         "trabalho": {
           "title": "Oportunidad de trabajo",
           "sub": "Búsqueda de empleo / candidato"

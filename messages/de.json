@@ -304,10 +304,6 @@
           "title": "Unternehmen / Unternehmer",
           "sub": "Corporate Executive Transportation"
         },
-        "pessoaFisica": {
-          "title": "Einzelpersonen",
-          "sub": "Transfer oder privater Fahrer"
-        },
         "trabalho": {
           "title": "Stellenangebot",
           "sub": "Jobsuche / Kandidat"

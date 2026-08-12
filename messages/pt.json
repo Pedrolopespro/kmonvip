@@ -304,10 +304,6 @@
           "title": "Empresa / Empresário",
           "sub": "Transporte Executivo Corporativo"
         },
-        "pessoaFisica": {
-          "title": "Pessoa Física",
-          "sub": "Transfer ou Motorista Particular"
-        },
         "trabalho": {
           "title": "Oportunidade de trabalho",
           "sub": "Busca de Emprego / Candidato"
