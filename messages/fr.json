@@ -322,6 +322,8 @@
       "subtitle": "Parlez-nous un peu du service souhaité.",
       "serviceType": "Genre de prestation",
       "selectPlaceholder": "Sélectionnez",
+      "city": "Ville du service",
+      "placeholderCity": "Ex : Brasília, São Paulo, Rio de Janeiro...",
       "startDate": "Date de début",
       "endDate": "Date de fin",
       "bilingual": "Chauffeur bilingue",

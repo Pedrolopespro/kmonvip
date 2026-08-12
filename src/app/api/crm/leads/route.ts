@@ -12,6 +12,7 @@ const CreateLeadSchema = z.object({
   phone: z.string().optional(),
   email: z.string().optional(),
   serviceInterest: z.string().optional(),
+  serviceCity: z.string().optional(),
   source: z.string().optional(),
   notes: z.string().optional(),
 });
@@ -61,6 +62,7 @@ export async function POST(req: NextRequest) {
     phone: parsed.data.phone ?? null,
     email: parsed.data.email ?? null,
     serviceInterest: parsed.data.serviceInterest ?? null,
+    serviceCity: parsed.data.serviceCity ?? null,
     source: parsed.data.source ?? "manual",
     notes: parsed.data.notes ?? null,
   });

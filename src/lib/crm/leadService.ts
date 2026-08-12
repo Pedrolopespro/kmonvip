@@ -25,7 +25,7 @@ export const LeadService = {
       if (existing[0]) {
         const noteAddition = `Nova solicitação em ${new Date().toLocaleString("pt-BR")}${
           input.serviceInterest ? ` — serviço: ${input.serviceInterest}` : ""
-        }`;
+        }${input.serviceCity ? ` — cidade: ${input.serviceCity}` : ""}`;
         const mergedNotes = existing[0].notes ? `${existing[0].notes}\n${noteAddition}` : noteAddition;
         // Keep first-touch gclid/fbclid/utm_term/utm_content if the lead already has one
         // (matches the 90-day first-touch cookie in tracking/attribution.ts) — only
@@ -34,10 +34,12 @@ export const LeadService = {
         const fbclid = existing[0].fbclid ?? input.fbclid ?? null;
         const utmTerm = existing[0].utm_term ?? input.utmTerm ?? null;
         const utmContent = existing[0].utm_content ?? input.utmContent ?? null;
+        // Service city reflects the latest request, not first-touch attribution.
+        const serviceCity = input.serviceCity ?? existing[0].service_city ?? null;
         const updated = (await sql`
           UPDATE leads
           SET updated_at = now(), notes = ${mergedNotes}, gclid = ${gclid}, fbclid = ${fbclid},
-              utm_term = ${utmTerm}, utm_content = ${utmContent}
+              utm_term = ${utmTerm}, utm_content = ${utmContent}, service_city = ${serviceCity}
           WHERE id = ${existing[0].id}
           RETURNING *
         `) as LeadRow[];
@@ -47,11 +49,11 @@ export const LeadService = {
 
     const inserted = (await sql`
       INSERT INTO leads (
-        name, company_name, phone, phone_normalized, email, service_interest,
+        name, company_name, phone, phone_normalized, email, service_interest, service_city,
         source, medium, campaign, conversion_page, gclid, fbclid, utm_term, utm_content, status, notes
       ) VALUES (
         ${input.name}, ${input.companyName ?? null}, ${input.phone ?? null}, ${phoneNormalized},
-        ${input.email ?? null}, ${input.serviceInterest ?? null}, ${input.source ?? null},
+        ${input.email ?? null}, ${input.serviceInterest ?? null}, ${input.serviceCity ?? null}, ${input.source ?? null},
         ${input.medium ?? null}, ${input.campaign ?? null}, ${input.conversionPage ?? null},
         ${input.gclid ?? null}, ${input.fbclid ?? null}, ${input.utmTerm ?? null}, ${input.utmContent ?? null},
         'novo', ${input.notes ?? null}
@@ -65,11 +67,11 @@ export const LeadService = {
     const phoneNormalized = normalizePhone(input.phone);
     const inserted = (await sql`
       INSERT INTO leads (
-        name, company_name, phone, phone_normalized, email, service_interest,
+        name, company_name, phone, phone_normalized, email, service_interest, service_city,
         source, medium, campaign, conversion_page, gclid, fbclid, utm_term, utm_content, status, notes
       ) VALUES (
         ${input.name}, ${input.companyName ?? null}, ${input.phone ?? null}, ${phoneNormalized},
-        ${input.email ?? null}, ${input.serviceInterest ?? null}, ${input.source ?? null},
+        ${input.email ?? null}, ${input.serviceInterest ?? null}, ${input.serviceCity ?? null}, ${input.source ?? null},
         ${input.medium ?? null}, ${input.campaign ?? null}, ${input.conversionPage ?? null},
         ${input.gclid ?? null}, ${input.fbclid ?? null}, ${input.utmTerm ?? null}, ${input.utmContent ?? null},
         'novo', ${input.notes ?? null}
@@ -86,7 +88,7 @@ export const LeadService = {
 
   async update(
     id: number,
-    patch: Partial<{ status: LeadStatus; notes: string; name: string; companyName: string; email: string; phone: string; serviceInterest: string }>
+    patch: Partial<{ status: LeadStatus; notes: string; name: string; companyName: string; email: string; phone: string; serviceInterest: string; serviceCity: string }>
   ): Promise<LeadRow | null> {
     const current = await this.getById(id);
     if (!current) return null;
@@ -98,6 +100,7 @@ export const LeadService = {
       phone: patch.phone ?? current.phone,
       phone_normalized: patch.phone ? normalizePhone(patch.phone) : current.phone_normalized,
       service_interest: patch.serviceInterest ?? current.service_interest,
+      service_city: patch.serviceCity ?? current.service_city,
       status: patch.status ?? current.status,
       notes: patch.notes ?? current.notes,
     };
@@ -106,7 +109,8 @@ export const LeadService = {
       UPDATE leads SET
         name = ${next.name}, company_name = ${next.company_name}, email = ${next.email},
         phone = ${next.phone}, phone_normalized = ${next.phone_normalized},
-        service_interest = ${next.service_interest}, status = ${next.status}, notes = ${next.notes},
+        service_interest = ${next.service_interest}, service_city = ${next.service_city},
+        status = ${next.status}, notes = ${next.notes},
         updated_at = now()
       WHERE id = ${id}
       RETURNING *

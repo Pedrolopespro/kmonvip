@@ -322,6 +322,8 @@
       "subtitle": "Conte um pouco sobre o atendimento desejado.",
       "serviceType": "Tipo de serviço",
       "selectPlaceholder": "Selecione",
+      "city": "Cidade do atendimento",
+      "placeholderCity": "Ex: Brasília, São Paulo, Rio de Janeiro...",
       "startDate": "Data início",
       "endDate": "Data término",
       "bilingual": "Motorista Bilíngue",

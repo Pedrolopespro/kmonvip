@@ -12,6 +12,7 @@ const COLUMNS: { header: string; get: (l: LeadRow) => string }[] = [
   { header: "telefone", get: (l) => l.phone ?? "" },
   { header: "email", get: (l) => l.email ?? "" },
   { header: "servico_interesse", get: (l) => l.service_interest ?? "" },
+  { header: "cidade_atendimento", get: (l) => l.service_city ?? "" },
   { header: "origem", get: (l) => l.source ?? "" },
   { header: "midia", get: (l) => l.medium ?? "" },
   { header: "campanha", get: (l) => l.campaign ?? "" },

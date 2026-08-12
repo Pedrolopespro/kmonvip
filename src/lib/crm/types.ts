@@ -65,6 +65,7 @@ export type LeadInput = {
   phone?: string | null;
   email?: string | null;
   serviceInterest?: string | null;
+  serviceCity?: string | null;
   source?: string | null;
   medium?: string | null;
   campaign?: string | null;
@@ -84,6 +85,7 @@ export type LeadRow = {
   phone_normalized: string | null;
   email: string | null;
   service_interest: string | null;
+  service_city: string | null;
   source: string | null;
   medium: string | null;
   campaign: string | null;

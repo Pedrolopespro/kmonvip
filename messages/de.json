@@ -322,6 +322,8 @@
       "subtitle": "Erzählen Sie uns ein wenig über den gewünschten Service.",
       "serviceType": "Art der Leistung",
       "selectPlaceholder": "Auswählen",
+      "city": "Einsatzort (Stadt)",
+      "placeholderCity": "Z. B.: Brasília, São Paulo, Rio de Janeiro...",
       "startDate": "Startdatum",
       "endDate": "Enddatum",
       "bilingual": "Zweisprachiger Fahrer",

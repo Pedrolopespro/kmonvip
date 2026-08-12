@@ -113,6 +113,7 @@ export default function CrmLeadsPage() {
               <th className="px-4 py-3 font-medium text-ink-700">Empresa</th>
               <th className="px-4 py-3 font-medium text-ink-700">Telefone</th>
               <th className="px-4 py-3 font-medium text-ink-700">Serviço</th>
+              <th className="px-4 py-3 font-medium text-ink-700">Cidade</th>
               <th className="px-4 py-3 font-medium text-ink-700">Origem</th>
               <th className="px-4 py-3 font-medium text-ink-700">Status</th>
               <th className="px-4 py-3 font-medium text-ink-700">Entrada</th>
@@ -122,14 +123,14 @@ export default function CrmLeadsPage() {
           <tbody>
             {loading && (
               <tr>
-                <td colSpan={8} className="px-4 py-8 text-center text-ink-500">
+                <td colSpan={9} className="px-4 py-8 text-center text-ink-500">
                   Carregando...
                 </td>
               </tr>
             )}
             {!loading && rows.length === 0 && (
               <tr>
-                <td colSpan={8} className="px-4 py-8 text-center text-ink-500">
+                <td colSpan={9} className="px-4 py-8 text-center text-ink-500">
                   Nenhum lead encontrado.
                 </td>
               </tr>
@@ -140,6 +141,7 @@ export default function CrmLeadsPage() {
                 <td className="px-4 py-3 text-ink-500 whitespace-nowrap">{lead.company_name ?? "—"}</td>
                 <td className="px-4 py-3 text-ink-500 whitespace-nowrap">{lead.phone ?? "—"}</td>
                 <td className="px-4 py-3 text-ink-500 whitespace-nowrap">{lead.service_interest ?? "—"}</td>
+                <td className="px-4 py-3 text-ink-500 whitespace-nowrap">{lead.service_city ?? "—"}</td>
                 <td className="px-4 py-3 text-ink-500 whitespace-nowrap">{lead.source ?? "Direto"}</td>
                 <td className="px-4 py-3 whitespace-nowrap">
                   <select

@@ -322,6 +322,8 @@
       "subtitle": "Tell us a little about the desired service.",
       "serviceType": "Service Type",
       "selectPlaceholder": "Please choose...",
+      "city": "Service city",
+      "placeholderCity": "E.g.: Brasília, São Paulo, Rio de Janeiro...",
       "startDate": "Start date",
       "endDate": "End Date",
       "bilingual": "(bilingual driver)",

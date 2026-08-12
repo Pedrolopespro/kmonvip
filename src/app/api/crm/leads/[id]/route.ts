@@ -12,6 +12,7 @@ const UpdateLeadSchema = z.object({
   phone: z.string().optional(),
   email: z.string().optional(),
   serviceInterest: z.string().optional(),
+  serviceCity: z.string().optional(),
   status: z.enum(LEAD_STATUSES as [string, ...string[]]).optional(),
   notes: z.string().optional(),
 });

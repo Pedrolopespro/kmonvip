@@ -322,6 +322,8 @@
       "subtitle": "请简要介绍您所需的服务。",
       "serviceType": "服务类型",
       "selectPlaceholder": "请选择",
+      "city": "服务城市",
+      "placeholderCity": "例如:巴西利亚、圣保罗、里约热内卢...",
       "startDate": "开始日期",
       "endDate": "结束日期",
       "bilingual": "双语司机",

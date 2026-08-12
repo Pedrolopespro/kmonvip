@@ -322,6 +322,8 @@
       "subtitle": "ご希望のサービスについて少しお聞かせください。",
       "serviceType": "サービスの種類",
       "selectPlaceholder": "選択",
+      "city": "サービス実施都市",
+      "placeholderCity": "例:ブラジリア、サンパウロ、リオデジャネイロ...",
       "startDate": "開始日",
       "endDate": "終了日",
       "bilingual": "バイリンガルドライバー",

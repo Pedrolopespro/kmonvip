@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS leads (
   phone_normalized TEXT,
   email TEXT,
   service_interest TEXT,
+  service_city TEXT,
   source TEXT,
   medium TEXT,
   campaign TEXT,

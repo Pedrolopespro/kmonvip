@@ -27,6 +27,7 @@ export default function LeadModal({
   const [phone, setPhone] = useState(lead?.phone ?? "");
   const [email, setEmail] = useState(lead?.email ?? "");
   const [serviceInterest, setServiceInterest] = useState(lead?.service_interest ?? "");
+  const [serviceCity, setServiceCity] = useState(lead?.service_city ?? "");
   const [status, setStatus] = useState<LeadStatus>(lead?.status ?? "novo");
   const [notes, setNotes] = useState(lead?.notes ?? "");
   const [saving, setSaving] = useState(false);
@@ -43,8 +44,8 @@ export default function LeadModal({
     const url = lead ? `/api/crm/leads/${lead.id}` : "/api/crm/leads";
     const method = lead ? "PATCH" : "POST";
     const body = lead
-      ? { name, companyName, phone, email, serviceInterest, status, notes }
-      : { name, companyName, phone, email, serviceInterest, notes };
+      ? { name, companyName, phone, email, serviceInterest, serviceCity, status, notes }
+      : { name, companyName, phone, email, serviceInterest, serviceCity, notes };
 
     const res = await fetch(url, {
       method,
@@ -81,9 +82,14 @@ export default function LeadModal({
           <FormField label="E-mail">
             <input className={inputCls()} value={email} onChange={(e) => setEmail(e.target.value)} />
           </FormField>
-          <FormField label="Serviço de interesse">
-            <input className={inputCls()} value={serviceInterest} onChange={(e) => setServiceInterest(e.target.value)} />
-          </FormField>
+          <div className="grid grid-cols-2 gap-4">
+            <FormField label="Serviço de interesse">
+              <input className={inputCls()} value={serviceInterest} onChange={(e) => setServiceInterest(e.target.value)} />
+            </FormField>
+            <FormField label="Cidade do atendimento">
+              <input className={inputCls()} value={serviceCity} onChange={(e) => setServiceCity(e.target.value)} />
+            </FormField>
+          </div>
           {lead && (
             <FormField label="Status">
               <select className={inputCls()} value={status} onChange={(e) => setStatus(e.target.value as LeadStatus)}>

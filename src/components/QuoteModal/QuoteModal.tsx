@@ -57,6 +57,7 @@ type Purpose = "empresa" | "trabalho" | "pessoa-fisica";
 type FormData = {
   purpose: Purpose | "";
   serviceType: string;
+  city: string;
   startDate: string;
   endDate: string;
   bilingualDriver: boolean;
@@ -74,6 +75,7 @@ type FormData = {
 const initialData: FormData = {
   purpose: "",
   serviceType: "",
+  city: "",
   startDate: "",
   endDate: "",
   bilingualDriver: false,
@@ -181,6 +183,7 @@ export default function QuoteModal() {
       if (data.purpose === "trabalho") e.purpose = t("step1.blockTitle");
     } else if (s === 2) {
       if (!data.serviceType) e.serviceType = "Selecione o tipo de serviço.";
+      if (!data.city.trim()) e.city        = "Cidade do atendimento é obrigatória.";
       if (!data.startDate)   e.startDate   = "Data de início é obrigatória.";
       if (!data.vehicleProtection) e.vehicleProtection = "Selecione um tipo de veículo.";
       if (!data.vehicleModel) e.vehicleModel = "Modelo do veículo é obrigatório.";
@@ -215,6 +218,7 @@ export default function QuoteModal() {
       ``,
       `*Categoria:* ${purposeLabel}`,
       `*Serviço:* ${data.serviceType}`,
+      `*Cidade:* ${data.city}`,
       `*Início:* ${data.startDate}`,
       data.endDate ? `*Término:* ${data.endDate}` : "",
       `*Motorista bilíngue:* ${data.bilingualDriver ? "Sim" : "Não"}`,
@@ -245,6 +249,7 @@ export default function QuoteModal() {
     const rows: [string, string][] = [
       ["Categoria", purposeLabel],
       ["Serviço", data.serviceType],
+      ["Cidade", data.city],
       ["Início", formatDateBR(data.startDate)],
       ...(data.endDate ? ([["Término", formatDateBR(data.endDate)]] as [string, string][]) : []),
       ["Motorista bilíngue", data.bilingualDriver ? "Sim" : "Não"],
@@ -332,6 +337,7 @@ export default function QuoteModal() {
         position: data.position,
         purpose: data.purpose,
         serviceType: data.serviceType,
+        city: data.city,
         vehicleProtection: data.vehicleProtection,
         ...attribution,
         landingPage: window.location.pathname,
@@ -592,6 +598,16 @@ function Step2({
             <option key={s.key} value={s.value}>{t(`step2.serviceOptions.${s.key}`)}</option>
           ))}
         </select>
+      </Field>
+
+      <Field label={`${t("step2.city")} *`} error={errors.city}>
+        <input
+          type="text"
+          value={data.city}
+          onChange={(e) => set("city", e.target.value)}
+          placeholder={t("step2.placeholderCity")}
+          className={inputCls(!!errors.city)}
+        />
       </Field>
 
       <div className="grid grid-cols-2 gap-3">
