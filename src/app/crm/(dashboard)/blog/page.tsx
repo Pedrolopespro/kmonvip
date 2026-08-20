@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { Plus, Pencil, Eye, EyeOff, Trash2 } from "lucide-react";
+import { Plus, Pencil, Eye, EyeOff, ExternalLink, Trash2 } from "lucide-react";
 import type { BlogPostRow } from "@/lib/crm/blogTypes";
 
 function formatDate(iso: string | null) {
@@ -118,6 +118,24 @@ export default function CrmBlogPage() {
                 <td className="px-4 py-3 text-ink-500 whitespace-nowrap">{formatDate(post.updated_at)}</td>
                 <td className="px-4 py-3 whitespace-nowrap">
                   <div className="flex items-center justify-end gap-1">
+                    {post.status === "published" ? (
+                      <a
+                        href={`/blog/${post.slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full text-ink-500 hover:text-ink-900 hover:bg-ink-100 transition-colors"
+                        title="Visualizar"
+                      >
+                        <ExternalLink size={15} />
+                      </a>
+                    ) : (
+                      <span
+                        className="p-2 rounded-full text-ink-200 cursor-not-allowed"
+                        title="Publique para visualizar no site"
+                      >
+                        <ExternalLink size={15} />
+                      </span>
+                    )}
                     <Link
                       href={`/crm/blog/${post.id}`}
                       className="p-2 rounded-full text-ink-500 hover:text-ink-900 hover:bg-ink-100 transition-colors"
