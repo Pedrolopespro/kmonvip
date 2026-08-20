@@ -63,3 +63,12 @@ CREATE TABLE IF NOT EXISTS crm_users (
   active BOOLEAN NOT NULL DEFAULT true,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+-- Key-value store for site behavior toggled live from /crm/funcoes.
+-- Reading a missing key falls back to the current hardcoded default in
+-- code, so adding a new setting never requires a migration to "activate" it.
+CREATE TABLE IF NOT EXISTS site_settings (
+  key TEXT PRIMARY KEY,
+  value JSONB NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
