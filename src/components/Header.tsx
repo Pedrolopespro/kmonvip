@@ -35,6 +35,7 @@ export default function Header() {
     { label: tNav("fleet"),    href: "/frota" },
     { label: tNav("coverage"), href: "/atuacao" },
     { label: tNav("about"),    href: "/sobre" },
+    { label: tNav("blog"),     href: "/blog" },
     { label: tNav("contact"),  href: "/contato" },
   ];
 
