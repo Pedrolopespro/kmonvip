@@ -107,7 +107,7 @@ const FAQS = [
   },
   {
     q: "Vocês buscam no aeroporto?",
-    a: "Sim. Acompanhamos o status do voo, aguardamos no desembarque com identificação e seguimos direto para Alto Paraíso. Se o voo atrasar, o motorista espera.",
+    a: "Sim. O motorista aguarda no desembarque com identificação e segue direto para Alto Paraíso. Combinamos o horário a partir do seu voo.",
   },
   {
     q: "Quantas pessoas cabem?",
