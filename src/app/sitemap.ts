@@ -52,6 +52,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...entry("/politica-de-privacidade", 0.3, "yearly"),
     ...entry("/lgpd", 0.3, "yearly"),
 
+    ...entry("/parcerias/pousada-inacia", 0.7),
+
     ...entry("/blog", 0.6, "weekly"),
     ...posts.flatMap((p) => entry(`/blog/${p.slug}`, 0.5, "monthly", new Date(p.updated_at))),
   ];

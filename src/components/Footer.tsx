@@ -95,6 +95,9 @@ export default function Footer() {
                 { label: t("historyLink"),  href: "/sobre/historia" },
                 { label: tNav("fleet"),     href: "/frota" },
                 { label: tNav("coverage"),  href: "/atuacao" },
+                // Single partner page for now; point this at a /parcerias hub once
+                // the event landings (NFL, Rock in Rio, F1) exist.
+                { label: t("partnersLink"), href: "/parcerias/pousada-inacia" },
                 { label: tNav("contact"),   href: "/contato" },
                 { label: t("privacy"),      href: "/politica-de-privacidade" },
                 { label: "LGPD",            href: "/lgpd" },

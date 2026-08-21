@@ -294,7 +294,8 @@
     "copyright": "Tous droits réservés. ",
     "privacy": "Politique de confidentialité",
     "terms": "Termes d’utilisation",
-    "historyLink": "Histoire"
+    "historyLink": "Histoire",
+    "partnersLink": "Événements & Partenariats"
   },
   "quoteModal": {
     "step": "Étape {current} sur {total}",

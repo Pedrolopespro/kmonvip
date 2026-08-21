@@ -22,6 +22,10 @@
   --brand-white: #FAF9F5;
   --brand-champagne: #BFB08A;
   --brand-champagne-dark: #A89871;
+  /* Champagne reads at ~2:1 on --c-paper, which fails WCAG even for large text.
+   * Use this darkened variant whenever the accent is TEXT on a light background
+   * (4.7:1 on paper); keep --brand-champagne for dark backgrounds and fills. */
+  --brand-champagne-ink: #7D6E49;
 
   --glass-bg-dark: rgba(20, 20, 19, 0.55);
   --glass-bg-light: rgba(255, 255, 255, 0.65);
